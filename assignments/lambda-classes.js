@@ -30,8 +30,10 @@ class Instructor extends Person {
     console.log(`${student.name} receives a perfect score on ${subject}`)
   }
 
-  addOrSubtractPoint(student, point) {
-    student.grade = student.grade + point;
+  addOrSubtractPoint(student) {
+    let point = Math.floor(Math.random() * 5) + 1;
+    student.grade < 70 ? student.grade = student.grade + point
+    : student.grade = student.grade - point;
     console.log(`Grade of ${student.name} is now at ${student.grade}`);
   }
 }
