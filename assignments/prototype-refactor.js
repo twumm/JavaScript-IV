@@ -157,3 +157,57 @@ console.log(archer.language); // Elvish
 console.log(archer.greet()); // Lilith offers a greeting in Elvish.
 console.log(mage.takeDamage()); // Bruce took damage.
 console.log(swordsman.destroy()); // Sir Mustachio was removed from the game.
+
+
+// Stretch task:
+// * Create Villain and Hero constructor functions that inherit from the Humanoid constructor function.
+// * Give the Hero and Villains different methods that could be used to remove health points from objects which could result in destruction if health gets to 0 or drops below 0;
+// * Create two new objects, one a villain and one a hero and fight it out with methods!
+
+function HeroKumVillain({ team, weapons, language, name, healthPoints, dimensions }) {
+  Humanoid.call(this, { team, weapons, language, name, healthPoints, dimensions });
+}
+
+HeroKumVillain.prototype.hit = function(player, hit) {
+  player.healthPoints = player.healthPoints - hit;
+
+  player.healthPoints <= 0
+    ? console.log(`${player.name} is dead!`)
+    : console.log(
+        `${player.name} lost ${hit} HP! ${player.healthPoints} HP left!`
+      );
+};
+
+const sinbad = new HeroKumVillain({
+  createdAt: new Date(),
+  dimensions: {
+    length: 2,
+    width: 1,
+    height: 1
+  },
+  healthPoints: 5,
+  name: "Sinbad",
+  team: "Ship",
+  weapons: ["Sword"],
+  language: "Darthraki"
+});
+
+const oneEyed = new HeroKumVillain({
+  createdAt: new Date(),
+  dimensions: {
+    length: 1,
+    width: 2,
+    height: 8
+  },
+  healthPoints: 10,
+  name: "One Eye",
+  team: "Ware",
+  weapons: ["Bow", "Dagger", "Spear"],
+  language: "Elvish"
+});
+
+console.log(oneEyed.hit(sinbad, 3));
+console.log(sinbad.hit(oneEyed, 6));
+console.log(`${oneEyed.name} gets infuriated and draws a huge one from ${sinbad.name}!`);
+console.log('Boooooom!!!')
+console.log(oneEyed.hit(sinbad, 3));
