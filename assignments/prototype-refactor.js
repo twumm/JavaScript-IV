@@ -59,7 +59,7 @@ class CharacterStats extends GameObject {
   }
 
   takeDamage() {
-    console.log(`${attrs.name} took damage`);
+    console.log(`${this.name} took damage`);
   }
 }
 
@@ -83,6 +83,19 @@ HumanoidOld.prototype = Object.create(CharacterStatsOld.prototype);
 HumanoidOld.prototype.greet = function() {
   return `${this.name} offers a greeting in ${this.language}`;
 };
+
+class Humanoid extends CharacterStats {
+  constructor(attrs) {
+    super(attrs)
+    this.team = attrs.team;
+    this.weapons = attrs.weapons;
+    this.language = attrs.language;
+  }
+
+  greet() {
+    console.log(`${this.name} offers a greeting in ${this.language}`);
+  }
+}
 
 /*
  * Inheritance chain: GameObject -> CharacterStats -> Humanoid
