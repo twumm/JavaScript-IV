@@ -29,6 +29,10 @@ class Instructor extends Person {
   grade(student, subject) {
     console.log(`${student.name} receives a perfect score on ${subject}`)
   }
+
+  addOrSubtractPoint(student, point) {
+    console.log(`Grade of ${student.name} is now at ${student.grade + point}`);
+  }
 }
 
 class Student extends Person {
