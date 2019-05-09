@@ -61,6 +61,11 @@ class Student extends Person {
   sprintChallenge(subject) {
     console.log(`${this.name} has begun sprint challenge on ${subject}`);
   }
+
+  graduate() {
+    this.grade > 70 ? console.log(`Congrats ${this.name}, you are a Lambda Graduate`)
+    : null;
+  }
 }
 
 class ProjectManager extends Instructor {
