@@ -178,6 +178,22 @@ HeroKumVillainOld.prototype.hit = function(player, hit) {
       );
 };
 
+class HeroKumVillain extends Humanoid {
+  constructor(attrs) {
+    super(attrs)
+  }
+
+  hit(player, hit) {
+    player.healthPoints = player.healthPoints - hit;
+  
+    player.healthPoints <= 0
+      ? console.log(`${player.name} is dead!`)
+      : console.log(
+          `${player.name} lost ${hit} HP! ${player.healthPoints} HP left!`
+        );
+  }
+}
+
 const sinbad = new HeroKumVillain({
   createdAt: new Date(),
   dimensions: {
