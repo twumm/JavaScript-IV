@@ -70,3 +70,25 @@ class ProjectManager extends Instructor {
     console.log(`${this.name} debugs ${student.name}'s code on ${subject}`);
   }
 }
+
+// Create 2 objects each for each class
+
+const studentA = new Student({
+  name: "Soho",
+  age: 24,
+  location: "Pigfarm",
+  gender: "M",
+  previousBackground: "Business",
+  className: "WEBEU2",
+  favSubjects: ["HTML", "CSS", "JavaScript", "React", "MongoDB"]
+});
+
+const studentB = new Student({
+  name: "Mono",
+  age: 33,
+  location: "MonoChrome",
+  gender: "F",
+  previousBackground: "Odd",
+  className: "WEBEU2",
+  favSubjects: ["HTML", "CSS", "MongoDB"]
+});
