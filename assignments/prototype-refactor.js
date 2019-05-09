@@ -52,6 +52,17 @@ CharacterStatsOld.prototype.takeDamage = function() {
   return `${this.name} took damage`;
 };
 
+class CharacterStats extends GameObject {
+  constructor(attrs) {
+    super(attrs);
+    this.healthPoints = attrs.healthPoints;
+  }
+
+  takeDamage() {
+    console.log(`${attrs.name} took damage`);
+  }
+}
+
 /*
   === Humanoid (Having an appearance or character resembling that of a human.) ===
   * team
