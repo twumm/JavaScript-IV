@@ -31,7 +31,8 @@ class Instructor extends Person {
   }
 
   addOrSubtractPoint(student, point) {
-    console.log(`Grade of ${student.name} is now at ${student.grade + point}`);
+    student.grade = student.grade + point;
+    console.log(`Grade of ${student.name} is now at ${student.grade}`);
   }
 }
 
