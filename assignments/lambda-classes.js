@@ -93,7 +93,7 @@ const studentB = new Student({
   favSubjects: ["HTML", "CSS", "MongoDB"]
 });
 
-// Instructor Class
+// Instructor Class Object
 const instructorA = new Instructor({
   name: "Gabe",
   age: 36,
@@ -112,4 +112,29 @@ const instructorB = new Instructor({
   specialty: "CSS",
   favLanguage: "JavaScript",
   catchPhrase: "Show up and go up!"
+});
+
+// Project Manager Class Object
+const projectManagerA = new ProjectManager({
+  name: "Anthony",
+  age: 29,
+  location: "Netherland",
+  gender: "M",
+  specialty: "JavaScript",
+  favLanguage: "JavaScript",
+  catchPhrase: "You seem to take to it like a fish in water!",
+  gradClassName: "WEBEU2",
+  favInstructor: "Gabe"
+});
+
+const projectManagerB = new ProjectManager({
+  name: "Olivia",
+  age: 28,
+  location: "Spain",
+  gender: "F",
+  specialty: "React",
+  favLanguage: "JavaScript",
+  catchPhrase: "Great!",
+  gradClassName: "WEBEU2",
+  favInstructor: "Gabe"
 });
