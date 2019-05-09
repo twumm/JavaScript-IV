@@ -92,3 +92,24 @@ const studentB = new Student({
   className: "WEBEU2",
   favSubjects: ["HTML", "CSS", "MongoDB"]
 });
+
+// Instructor Class
+const instructorA = new Instructor({
+  name: "Gabe",
+  age: 36,
+  location: "Spain",
+  gender: "M",
+  specialty: "React",
+  favLanguage: "JavaScript",
+  catchPhrase: "Boooom"
+});
+
+const instructorB = new Instructor({
+  name: "Jane",
+  age: 30,
+  location: "Ireland",
+  gender: "F",
+  specialty: "CSS",
+  favLanguage: "JavaScript",
+  catchPhrase: "Show up and go up!"
+});
