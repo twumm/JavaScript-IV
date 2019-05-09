@@ -25,6 +25,18 @@ GameObjectOld.prototype.destroy = function() {
   console.log(`${this.name} was removed from the game.`);
 };
 
+class GameObject {
+  constructor(attrs) {
+    this.name = attrs.name;
+    this.createdAt = attrs.createdAt;
+    this.dimensions = attrs.dimensions;
+  }
+
+  destroy() {
+    console.log(`${this.name} was removed from the game.`);
+  }
+}
+
 /*
   === CharacterStats ===
   * healthPoints
