@@ -37,6 +37,7 @@ class Student extends Person {
     this.previousBackground = props.previousBackground;
     this.className = props.className;
     this.favSubjects = props.favSubjects;
+    this.grade = Math.floor(Math.random() * 100) + 1;
   }
 
   listsSubjects() {
